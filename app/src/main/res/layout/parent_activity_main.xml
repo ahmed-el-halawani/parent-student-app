@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.parentUi.ParentMainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_weight="2"
+        android:contentDescription="@string/headerDrawableShadow2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/shadow2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/shadow"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="2">
+
+            <ImageButton
+                android:id="@+id/btn_profile"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="0dp"
+
+                android:contentDescription="@string/profile_btn"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/download"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toStartOf="@+id/tv_cash"
+                android:layout_toEndOf="@+id/btn_profile"
+                android:gravity="center_vertical"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#2D3BFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_cash"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center_vertical"
+                android:text="@string/defCash"
+                android:textColor="@color/red"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_addSon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/add_son"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:text="@string/add_son"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="UnusedAttribute" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_students"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:dividerHeight="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+    </ListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

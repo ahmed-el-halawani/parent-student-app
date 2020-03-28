@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <RadioGroup
+                    android:id="@+id/toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/red_out_line"
+                    android:checkedButton="@id/rb_parent"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/rb_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/parent"
+
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rb_student"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_background"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/student"
+                        android:textColor="@color/red"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/lo_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="50dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/iv_profileRegister"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/download" />
+
+                            <TextView
+                                android:id="@+id/tv_editImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_alignBottom="@+id/iv_profileRegister"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:background="#6D0E0000"
+                                android:text="@string/add_image"
+                                android:textAlignment="center"
+                                android:textColor="#FFFEFE"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:hintAnimationEnabled="true">
+
+                        <EditText
+                            android:id="@+id/et_parentNameRegister"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/parent_name"
+                            android:inputType="textEmailAddress"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:textSize="24sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:hintAnimationEnabled="true">
+
+                        <EditText
+                            android:id="@+id/et_parentEmailRegister"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/parent_email"
+                            android:inputType="textEmailAddress"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:textSize="24sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:hintAnimationEnabled="true"
+                        app:passwordToggleEnabled="true">
+
+                        <EditText
+                            android:id="@+id/et_parentpasswordRegister"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/parent_password"
+                            android:inputType="textPassword"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:textSize="24sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:hintAnimationEnabled="true"
+                        app:passwordToggleEnabled="true">
+
+                        <EditText
+                            android:id="@+id/et_parentpasswordRegister2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/confirm_password"
+                            android:inputType="textPassword"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:textSize="24sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lo_child"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="50dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/iv_studentProfileRegister"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/download" />
+
+                            <TextView
+                                android:id="@+id/tv_editSonImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_alignBottom="@+id/iv_studentProfileRegister"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:background="#6D0E0000"
+                                android:text="@string/add_image"
+                                android:textAlignment="center"
+                                android:textColor="#FFFEFE"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/et_studentNameRegister"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/student_name"
+                            android:inputType="textEmailAddress"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:textSize="24sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/et_studentEmailRegister"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/student_email"
+                            android:inputType="textEmailAddress"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:textSize="24sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:passwordToggleEnabled="true">
+
+                        <EditText
+                            android:id="@+id/et_studentPasswordRegister"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/student_password"
+                            android:inputType="textPassword"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:textSize="24sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:passwordToggleEnabled="true">
+
+                        <EditText
+                            android:id="@+id/et_studentPasswordRegister2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/confirm_password"
+                            android:inputType="textPassword"
+                            android:paddingTop="20dp"
+                            android:paddingBottom="20dp"
+                            android:textSize="24sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_signUpRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:text="@string/sign_up"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/lo_progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CD000000"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

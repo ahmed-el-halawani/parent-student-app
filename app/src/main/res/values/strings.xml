@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Parent app</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="parent_name">Parent Name</string>
+    <string name="parent_email">Parent Email</string>
+    <string name="parent_password">Parent Password</string>
+    <string name="sign_up">sign up</string>
+    <string name="parent">Parent</string>
+    <string name="son">son</string>
+
+
+    <!-- signIn -->
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">sign In</string>
+    <string name="sign_up_activity">create email</string>
+    <!-- end signIn -->
+
+    <string name="add_image">Add image</string>
+    <string name="school_key">School Key</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="student_name">Student Name</string>
+    <string name="student_email">Student Email</string>
+    <string name="student_password">Student Password</string>
+    <string name="rule_error">الايميل او الباسورد خطأ او غير دورك بين اب او ابن</string>
+    <string name="student">Student</string>
+    <string name="add_son">Add Son</string>
+    <string name="defCash">0 EGP</string>
+    <string name="market_app">market app</string>
+    <string name="profile_btn">profile</string>
+    <string name="headerDrawableShadow2">headerDrawableShadow2</string>
+
+    <!-- profile -->
+    <string name="log_out">log out</string>
+    <string name="money_you_have">money you have</string>
+    <string name="money_picture">moneyPicture</string>
+    <string name="test_email">test@test.com</string>
+    <string name="your_email">your email</string>
+    <string name="user_name">user name</string>
+    <string name="profile_image">profile_image</string>
+    <string name="overlay">overLay</string>
+    <string name="bgProfile_image">bgProfile_image</string>
+    <!-- end profile-->
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="meal">meal</string>
+    <string name="remove">REMOVE</string>
+    <string name="add_to_bag">add to bag</string>
+    <string name="qr_code">qr code</string>
+    <string name="control">control</string>
+    <string name="history">history</string>
+    <string name="remove_student">remove student</string>
+    <string name="free_buy">free buy</string>
+    <string name="controlled">controlled</string>
+    <string name="free_to_buy">free to buy</string>
+    <string name="send_money_hint">money u want send</string>
+    <string name="send_money">send money</string>
+    <string name="send">send</string>
+    <string name="market">market</string>
+    <string name="my_bag">my bag</string>
+    <string name="defultPrice">0.0 EGP</string>
+    <string name="noimage">NoImage</string>
+    <string name="total_price">Total price</string>
+    <string name="deffultCash">0.0 EGP</string>
+    <string name="product_name">product name</string>
+    <string name="product_price">product price</string>
+    <string name="product_type">product type</string>
+
+</resources>

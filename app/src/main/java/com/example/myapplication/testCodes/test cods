@@ -1,0 +1,45 @@
+
+    Another method to search in database
+
+    private fun getStudent2(){
+        val start = System.currentTimeMillis()
+        studentRef.addValueEventListener(object:ValueEventListener{
+            override fun onCancelled(p0: DatabaseError) {
+            }
+
+            override fun onDataChange(studentSnapshot: DataSnapshot) {
+                val studentsList = ArrayList<Student>()
+                parentRef.addListenerForSingleValueEvent(object:ValueEventListener{
+                    override fun onCancelled(p0: DatabaseError) {
+                    }
+
+                    override fun onDataChange(parentSnapshot: DataSnapshot) {
+                        val students = parentSnapshot.child(pId).getValue(Parents::class.java)!!.children
+                        for (i in students){
+                            if(studentSnapshot.child(i.value).exists()){
+                                val student = studentSnapshot.child(i.value).getValue(Student::class.java)!!
+                                studentsList.add(student)
+                            }
+
+                        }
+                        val end = System.currentTimeMillis()
+
+                        Log.e("time ---:::: " ,"${start - end}")
+
+                        lv_students.adapter = ListView(this@ParentMainActivity,studentsList,this@ParentMainActivity)
+                    }
+
+                })
+
+            }
+
+        })
+    }
+    -------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#343BFF</color>
+    <color name="colorPrimaryDark">#1B1B74</color>
+    <color name="colorAccent">#0011FF</color>
+    <color name="background">#EDEEF0</color>
+    <color name="red">#DF000C</color>
+    <color name="dark_red">#9C020B</color>
+    <color name="transparent">#00000000</color>
+    <color name="yellow">#e1a731</color>
+    <color name="green">#66E131</color>
+    <color name="white">#FFFFFF</color>
+    <color name="defColor">#6B6B6B</color>
+
+    <!-- start market -->
+    <color name="removeItem">#DC5E5F</color>
+    <color name="itemTextColor">#333333</color>
+    <color name="itemBtn">#FDCC6F</color>
+    <color name="offWhite">#838383</color>
+    <color name="marketBackground">#F1F5F8</color>
+    <color name="buttonColor">#B8B8BE</color>
+    <color name="addButton">#4DE855</color>
+    <color name="buttonUnChickColor">#E8E9EC</color>
+    <!-- end market -->
+
+    <!-- start splash -->
+    <color name="splashScreenTint">#CDD1D4</color>
+</resources>

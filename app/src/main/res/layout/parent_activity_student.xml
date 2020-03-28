@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.parentUi.StudentActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/custom_action_bar"
+            layout="@layout/component_custom_action_bar"
+            android:layout_width="0dp"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_parentStudentProfile"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/profile_btn"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/download"
+            tools:ignore="UnusedAttribute" />
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_parentStudentTapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/control" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_parentStudentViewPagerLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/background"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_parentStudentTapLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

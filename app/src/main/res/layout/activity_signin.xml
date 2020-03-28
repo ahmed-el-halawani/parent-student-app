@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".SignInActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_ruleError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:padding="20dp"
+                android:text="@string/rule_error"
+                android:textAlignment="center"
+                android:textColor="#FF0000"
+                android:textDirection="rtl"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <RadioGroup
+                android:id="@+id/toggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/red_out_line"
+                android:checkedButton="@+id/signInParent"
+                android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/signInParent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/parent"
+
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/signInStudent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/student"
+                    android:textColor="@color/red"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/lo_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:paddingTop="10dp"
+                        android:textSize="24sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:passwordToggleEnabled="true">
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:paddingTop="10dp"
+                        android:textSize="24sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_signIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="@string/sign_in"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/btn_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/red"
+                android:text="@string/sign_up_activity"
+                android:textColor="#fff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_testUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/red"
+                android:text="test"
+                android:textColor="#fff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lo_progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CD000000"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

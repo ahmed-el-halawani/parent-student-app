@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RadioGroup
+            android:id="@+id/toggle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/red_out_line"
+            android:checkedButton="@id/mealListView"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <RadioButton
+                android:id="@+id/mealListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_widget_background"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/meal"
+
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/qrCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_widget_background"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/qr_code"
+                android:textAllCaps="true"
+                android:textColor="@color/red"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toggle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mealContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ListView
+                    android:id="@+id/lv_meals"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:divider="#00FFFFFF"
+                    android:dividerHeight="15dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </ListView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/qrcodeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_qrcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/noimage"
+                    android:padding="20dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/us_dollar" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total_price"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_mealPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/deffultCash"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fb_addMeal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/ic_add_meal"
+            app:backgroundTint="@color/red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
